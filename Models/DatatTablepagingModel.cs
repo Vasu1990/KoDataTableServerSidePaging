@@ -12,11 +12,17 @@ namespace KODatatableServerSidePaging.Models
             public string Name { get; set; }
             public string Address { get; set; }
         }
+
+
+    //models required by data table
+    //this is used to send the search query text
         public class GlobalSearchText
         {
             public string value { get; set; }
             public string regex { get; set; }
         }
+
+    //this model is used to send the information about each column
         public class DataTableConfig
         {
             public string ColumnName { get; set; }

@@ -133,6 +133,7 @@
         <td data-bind="text: Address "></td>
     </script>
 
+
     <script>
         //object to hold Knockout View Model
         var vm = {};
@@ -175,13 +176,13 @@
                     type: "POST",
                     success: function (responseData, textStatus, jqXHR) {
                         var result = {
-                            Data: responseData,
-                            TotalRecords: 100,
-                            DisplayedRecords: responseData.length
+                            Data: responseData, //data to be bounf to the table
+                            TotalRecords: 100, //this should be returned in your result as total no of records that exists
+                            DisplayedRecords: responseData.length //total records been displayed
                         }
 
                         console.log(responseData);
-                        callback(result);
+                        callback(result); //required by the plugin
                     },
                     error: function (responseData) {
 
@@ -195,7 +196,7 @@
             ko.applyBindings(vm.DealModel, document.getElementById("wrapTemplate"));
         })(vm)
         
-
+        //binds list or grid view when clicked
         function BindSelectedTemplate(arg) {
             var table;
 
