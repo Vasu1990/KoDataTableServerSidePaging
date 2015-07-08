@@ -1,0 +1,65 @@
+﻿.mainmenucontain {
+    width: 100% !important;
+}
+
+.minht555 {
+    min-height: 555px;
+}
+
+.formbox-custm {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 25px;
+    border: 1px solid #DDD;
+    padding: 40px !important;
+}
+
+#lsUtility .list > li {
+    margin-bottom: 0px !important;
+    padding: 0px !important;
+}
+
+.login {
+    width: 100% !important;
+    border-left: 1px solid #f3601d;
+    border-bottom: 1px solid #f3601d;
+    border-right: 1px solid #f3601d;
+}
+
+.noty_message {
+    padding: 0px !important;
+}
+
+
+.responsivetable2 .resonable .pricebox {
+    border: 1px double #F3601D;
+}
+
+.login {
+    width: 100% !important;
+    border-left: 1px solid #f3601d;
+    border-bottom: 1px solid #f3601d;
+    border-right: 1px solid #f3601d;
+}
+
+.noty_message {
+    padding: 0px !important;
+}
+
+.noty_pad {
+    margin: 0px !important;
+    padding: 10px !important;
+    line-height:20px!important;
+}
+
+.button_icon_position {
+    left: 4px;
+    position: relative;
+}
+
+.login_font {
+    font-size: 13px;
+}
+.colorRed {
+color:red;
+}
