@@ -32,27 +32,28 @@
             <div data-bind="if:vm.SelectedTemplate() == 'divTable'">
                 <table id="dvTable" class="table tblProductsList"
                        data-bind="dataTable: {
-                                            dataSource:vm.dataSource,
-                                            rowTemplate: 'dealTableTemplate',// template to bind for each row of table
-                                            ordering:false, 
-                                            bAutoWidth : false,
-                                                info:false,
-                                            columns: [
-                                                   {data: 'Id', bSortable: true }, //do you want this column to be sortable ?
-                                                        {data:'Name', bSortable: false},
-                                                        {data:'Address', bSortable: true}
+                                        dataSource:vm.dataSource,
+                                        rowTemplate: 'dealTableTemplate',
+                                        ordering:false,
+                                        bAutoWidth : false,
+                                            info:false,
+                                        //optional provide sorting option for each column
+                                        columns: [
+                                               {data: 'Id', bSortable: true },
+                                               {data: 'Name', bSortable: true },
+                                               {data: 'Address', bSortable: false }
 
-                                                    ],
+                                                ],
 
-                                            options: {
-                                                sPaginationType: 'bootstrap',
-                                                bAutoWidth: 'false',
+                                        options: {
+                                            sPaginationType: 'bootstrap',
+                                            bAutoWidth: 'false',
 
-                                                oLanguage: {
-                                                    sLengthMenu: '_MENU_Records Per Page<br>'
-                                                }
-                                               }
-                                         }">
+                                            oLanguage: {
+                                                sLengthMenu: '_MENU_Deals Per Page<br>'
+                                            }
+                                           }
+                                           }">
                     <thead>
                         <tr>
                             <th class="text-center  tblClass">Id</th>
@@ -62,6 +63,7 @@
                     </thead>
                     <tbody></tbody>
                 </table>
+               
             </div>
 
             <div data-bind="if:vm.SelectedTemplate() == 'divGrid'">
@@ -142,7 +144,7 @@
     (function (vm) {
             
             //Observable to decide which template to invoke
-            vm.SelectedTemplate = ko.observable('divGrid');
+            vm.SelectedTemplate = ko.observable('divTable');
 
             //array type observable to hold table data
             vm.DealModel = ko.observableArray([]);
